@@ -3,8 +3,10 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 import {  BiChevronDown,BiSearch,BiChevronLeft } from "react-icons/bi";
 import { BsList } from "react-icons/bs";
+import {MdOutlineClose} from 'react-icons/md'
 function NavBar() {
   const [menueopen, setmenueopen] = useState(false);
+  const [dropeopen, setdropopen] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
   const handleClick = (item) => {
     setActiveItem(item);
@@ -18,8 +20,10 @@ function NavBar() {
       </div>
      
       <ul className="menue" style={{ top: menueopen && "0" }}>
-      <button className="nav-buttonSearch"><p className="search-iconBack"><BiSearch className="search-icon"/></p><p className="search-word">ابحث</p></button>
+        <div className="nav-allButton">
+      <button className="nav-buttonSearch"><p className="search-iconBack"><BiSearch className="search-icon"/></p><p className="search-word">...ابحث</p></button>
       <button className="nav-button">English</button>
+      </div>
       
       <li
         className={`nav-item dropdown ${
@@ -31,9 +35,10 @@ function NavBar() {
           className="nav-link"
           onClick={() => handleClick("dropdown")}
         >
-          الأخبار<BiChevronDown />
+          الأخبار<BiChevronDown className="nav-link-icon" />
         </a>
-        <ul className="dropdown-menu">
+       
+        <ul className="dropdown-menu" >
           <li className="dropdown-item">
             <Link to="/option1">الاخبار</Link>
           </li>
@@ -45,7 +50,7 @@ function NavBar() {
           </li>
         </ul>
       </li>
-
+          
         <li
         className={`nav-item dropdown ${
           activeItem === "dropdown" ? "active" : ""
@@ -56,8 +61,9 @@ function NavBar() {
           className="nav-link"
           onClick={() => handleClick("dropdown")}
         >
-          الخدمات<BiChevronDown />
+          الخدمات<BiChevronDown  className="nav-link-icon" />
         </a>
+        
         <ul className="dropdown-menu">
           <li className="dropdown-item">
             <Link to="/option1">الاخبار</Link>
@@ -70,7 +76,7 @@ function NavBar() {
           </li>
         </ul>
       </li>
-
+    
         <li
         className={`nav-item dropdown ${
           activeItem === "dropdown" ? "active" : ""
@@ -81,8 +87,9 @@ function NavBar() {
           className="nav-link"
           onClick={() => handleClick("dropdown")}
         >
-          عن الوزارة <BiChevronDown />
+          عن الوزارة <BiChevronDown  className="nav-link-icon"/>
         </a>
+        
         <ul className="dropdown-menu">
           <li className="dropdown-item">
             <Link to="/option1">الاخبار</Link>
@@ -95,7 +102,7 @@ function NavBar() {
           </li>
         </ul>
       </li>
-
+    
         <li
         className={`nav-item dropdown ${
           activeItem === "dropdown" ? "active" : ""
@@ -106,8 +113,9 @@ function NavBar() {
           className="nav-link"
           onClick={() => handleClick("dropdown")}
         >
-          الرئيسية <BiChevronDown />
+          الرئيسية <BiChevronDown  className="nav-link-icon"/>
         </a>
+       
         <ul className="dropdown-menu">
           <li className="dropdown-item">
             <Link to="/option1">الاخبار</Link>
@@ -120,14 +128,21 @@ function NavBar() {
           </li>
         </ul>
       </li>
-
+      <div className="close-icon" onClick={() => setmenueopen((prev) => !prev)}>
+              <MdOutlineClose
+                size={40}
+               
+                className="close-icon"
+              />
+              </div>
       </ul>
 
       <p className="nav-logo">  الجهورية العربية السورية<br/> وزارة النفط والثروة المعدنية</p>
 
-      
+     
       
     </nav>
+
     <h2 className="nav-title">عالم جديد من احدث الاليات في مجال النفط</h2>
     <p className="nav-p"> 
     بفضل جهود كوادرنا المبدعة والحثيثة من العمال
