@@ -1,0 +1,235 @@
+.news{
+    margin: 100px 0px;
+    padding: 40px;
+    height: 900px;
+    background-color: rgba(30, 139, 191, 1);
+
+}
+.news-up{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.news-up-1{
+    display: flex;
+    flex-direction: row;
+    font-family: cairo;
+    font-weight: 500;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+.news-up-1:hover{
+    text-decoration: underline;
+}
+.news-up-1-icon{
+    width: 10px;
+    height: 22px;
+    margin-right: 10px;
+}
+.news-up-1 , .news-up-2{
+    margin-top: 30px;
+}
+.news-up-2{
+    font-family: cairo;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    margin-right: 45px;
+}
+.news-down{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 35px;
+    overflow: hidden;
+}
+.cardNews {
+  
+    align-items: center;
+   width: 400px;
+    height: 700px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    
+   
+    background-color: white;
+  }
+ 
+  
+ 
+ 
+  .cardImageNews {
+    width: 400px;
+    height: 440px;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+   object-fit: cover;
+    
+  }
+  
+  .cardContent {
+    flex: 1;
+  }
+  
+  .cardTitlee {
+    font-family: Cairo;
+    margin-right: 5px;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 1)
+  }
+.news-button{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    width: 111px;
+    height: 34px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(30, 139, 191, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: cairo;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-left: 280px;
+  }
+  .news-button:hover{
+  border: 1px solid rgba(30, 139, 191, 1);
+      color: rgba(30, 139, 191, 1);
+      background-color: rgba(255, 255, 255, 1);
+  }
+  .news-button-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    width: 80px;
+    height: 24px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(30, 139, 191, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: cairo;
+    font-size: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-left: 200px;
+  
+  }
+  .news-button-item:hover{
+    border: 1px solid rgba(30, 139, 191, 1);
+    color: rgba(30, 139, 191, 1);
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+.best-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 600px;
+    margin-right: 100px;
+
+  }
+  .news-images{
+    height: 336px;
+    background-color: white;
+    border-radius: 25px;
+  }
+  .news-image{
+    width: 300px;
+    height: 270;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  
+
+ 
+  
+
+  .best-item-text-p {
+    font-family: Cairo;
+    margin-right: 5px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 1)
+  }
+
+  
+
+.slider-news{
+  display: none;
+}
+@media screen and (min-width:775px) and (max-width:1025px){
+  .cardNews{
+    display: none;
+  }
+}
+  @media screen and (max-width: 766px) {
+   .news{
+    display: none;
+   }
+      .slider-news{
+       display: block;
+        height: 300px;
+      margin-top: 20px;
+      
+        
+      }
+      .slid-box {
+        text-align: center;
+        
+        background-color:  white;
+        border: 1px solid rgba(30, 139, 191, 1);
+        width: 260px ;
+        height:  287px;
+        margin: auto;
+        border-radius: 15px;
+      
+      }
+      .slick-slide img{
+        width: 260px;
+        height: 270;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+       
+      }
+     .news-up-1-slid{
+      margin-bottom: 20px;
+      color: rgba(30, 139, 191, 1);
+     }
+     .news-up-2-slid{
+      margin-bottom: 20px;
+      margin-right: 10px;
+      color: rgba(30, 139, 191, 1);
+      font-size: 30px;
+      font-weight: 700;
+     }
+   .news-button-slid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    width: 80px;
+    height: 24px;
+    border: none;
+    border-radius: 25px;
+    color: rgba(30, 139, 191, 1);
+    font-family: cairo;
+    font-size: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-left: 160px;
+   }
+  }

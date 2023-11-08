@@ -1,0 +1,220 @@
+
+
+.prev-up-1{
+    display: flex;
+    flex-direction: row;
+    font-family: cairo;
+    font-weight: 500;
+    font-size: 25px;
+    color: #024D71;
+    cursor: pointer;
+}
+
+
+.prev-up-2{
+    font-family: cairo;
+    font-weight: 700;
+    font-size: 30px;
+    color: #024D71;
+    margin-right: 45px;
+}
+.prev-down{
+    display: flex;
+    flex-direction: row;
+    margin: 35px;
+    overflow: hidden;
+}
+.cardNews {
+  
+    align-items: center;
+   width: 400px;
+    height: 700px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    
+   
+    background-color: white;
+  }
+ 
+  
+ 
+ 
+  .cardImageNews {
+    width: 400px;
+    height: 440px;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+   object-fit: cover;
+    
+  }
+  
+  .cardContent {
+    flex: 1;
+  }
+  
+  .cardTitlee {
+    font-family: Cairo;
+    margin-right: 5px;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 1)
+  }
+.news-button{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    width: 111px;
+    height: 34px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(30, 139, 191, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: cairo;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-left: 280px;
+  }
+  .news-button:hover{
+  border: 1px solid rgba(30, 139, 191, 1);
+      color: rgba(30, 139, 191, 1);
+      background-color: rgba(255, 255, 255, 1);
+  }
+  .news-button-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    width: 80px;
+    height: 24px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(30, 139, 191, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: cairo;
+    font-size: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-left: 200px;
+  
+  }
+  .news-button-item:hover{
+    border: 1px solid rgba(30, 139, 191, 1);
+    color: rgba(30, 139, 191, 1);
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+.best-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 600px;
+    margin-right: 100px;
+
+  }
+  .news-images{
+    height: 336px;
+    background-color: white;
+    border-radius: 25px;
+  }
+  .news-image{
+    width: 300px;
+    height: 270;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  
+
+ 
+  
+
+  .best-item-text-p {
+    font-family: Cairo;
+    margin-right: 5px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 1)
+  }
+  .prev-container{
+    height: 400px;
+  }
+.prev-slide{
+  display: block;
+        height: 300px;
+      margin-top: 20px;
+}
+  .prev-box{
+    text-align: center;
+        
+    background-color:  rgba(30, 139, 191, 1);
+    border: 1px solid rgba(30, 139, 191, 1);
+    width: 390px ;
+    height:  387px;
+    margin: auto;
+    border-radius: 15px;
+  }
+
+.prev-image img{
+  width: 390px;
+  height: 270;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.prev-box p{
+  text-align: right;
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+}
+  .prev-button-slid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    width: 80px;
+    height: 24px;
+    border: none;
+    border-radius: 25px;
+    color: rgba(30, 139, 191, 1);
+    background-color: rgba(255, 255, 255, 1);
+    font-family: cairo;
+    font-size: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  @media screen and (max-width: 766px) {
+    .prev-box{
+      background-color: white;
+      border: 1px solid rgba(30, 139, 191, 1);
+      width: 290px ;
+    height: 310px;
+    }
+    .prev-image img{
+      width: 290px;
+    }
+    .prev-box p{
+      color: black;
+    }
+    .prev-button-slid{
+      color: rgba(30, 139, 191, 1);
+      background-color: none;
+      margin-top: 10px;
+      margin-left: 200px;
+      font-size: 10px;
+    }
+    .prev-up-2{
+      font-size: 20px;
+    }
+  }

@@ -1,0 +1,90 @@
+.affilied{
+    background: var(--grey, #D9D9D9);
+   height: 400px;
+
+}
+.affi-title{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.affi-title h3{
+    font-size: 40px;
+    font-family: Cairo;
+    font-weight: 600;
+}
+.affi-slide{
+    display: block;
+        height: 100px;
+      margin-top: 20px;
+}
+.affi-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow: hidden;
+    margin-left: 100px;
+    justify-content: center;
+}
+.affi-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;  
+    background-color:  white;
+    border: 1px solid white;
+    width: 300px ;
+    height:  200px;
+    margin-left: 10px;
+    border-radius: 15px;
+  }
+  .affi-box p{
+    font-weight: 600;
+  }
+  .affi-container-small{
+    display: none;
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 1024px) {
+    .affilied{
+        height: 600px;
+    }
+.affi-container{
+    display: none;
+}
+    .affi-container-small{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+       
+    }
+    .affi-box-container{
+        margin-bottom: 10px;
+    }
+  }
+  @media screen and (max-width: 766px) {
+    .affilied{
+        height: 600px;
+    }
+    .affi-container{
+        display: none;
+    }
+    .affi-container-small{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+       
+    }
+    .affi-box-container{
+        margin-bottom: 10px;
+    }
+    .affi-box{
+        width: 170px ;
+    height:  200px;
+    }
+    .affi-image img{
+        width: 50px;
+    }
+  }
