@@ -16,7 +16,7 @@ function Footer() {
   
     async function getProduct() {
       var res = await axios.get("https://mustafa-fares.nouh-agency.com/api/ar/contact");
-      console.log(res.data.data);
+     
       setData(res.data.data[0]);
     }
   return (

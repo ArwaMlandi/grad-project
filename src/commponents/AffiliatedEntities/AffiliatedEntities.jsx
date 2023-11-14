@@ -13,7 +13,7 @@ function AffiliatedEntities() {
 
   async function getProduct() {
     var res = await axios.get("https://mustafa-fares.nouh-agency.com/api/ar/affiliatedEntity");
-    console.log(res.data.data);
+   
     setData(res.data.data);
   }
 

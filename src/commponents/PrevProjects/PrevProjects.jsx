@@ -13,7 +13,7 @@ function PrevProjects() {
   
     async function getProduct() {
       var res = await axios.get("https://mustafa-fares.nouh-agency.com/api/ar/project");
-      console.log(res.data.data);
+      
       setData(res.data.data);
     }
   const settings = {

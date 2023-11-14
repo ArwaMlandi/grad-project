@@ -17,7 +17,7 @@ function Home() {
 
   async function getProductWord() {
     var res = await axios.get("https://mustafa-fares.nouh-agency.com/api/ar/welcome");
-    console.log(res.data.data[0]);
+    
     setDataWord(res.data.data[0]);
   }
 

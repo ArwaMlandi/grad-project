@@ -17,7 +17,7 @@ function News() {
 
   async function getProduct() {
     var res = await axios.get("https://mustafa-fares.nouh-agency.com/api/ar/news");
-    console.log(res.data.data[1]);
+   
     setdata1(res.data.data[1])
     setData(res.data.data);
 

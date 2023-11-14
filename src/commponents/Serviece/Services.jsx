@@ -14,7 +14,7 @@ function Services() {
   
     async function getProduct() {
       var res = await axios.get("https://mustafa-fares.nouh-agency.com/api/ar/service");
-      console.log(res.data.data);
+     
       setData(res.data.data);
     }
   return (
@@ -25,7 +25,7 @@ function Services() {
         </div>
         <div className="container-testa">
 
-          {data.map((ser, id) => (
+          {service.map((ser, id) => (
             <div key={id} className="testi-box-container">
               <div className='testi-box-container-icon'>
                   <img src={icon} alt="row" />
