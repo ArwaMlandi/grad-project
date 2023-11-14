@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import NavBar from '../../commponents/NavBar/NavBar'
 import News from '../../commponents/News/News'
 import Services from '../../commponents/Serviece/Services'
@@ -7,10 +7,24 @@ import PrevProjects from '../../commponents/PrevProjects/PrevProjects'
 import AffiliatedEntities from '../../commponents/AffiliatedEntities/AffiliatedEntities'
 import './Home.css'
 import Footer from '../../commponents/Footer/Footer'
+import axios from 'axios'
 function Home() {
+  const [dataWord, setDataWord] = useState([]);
+  
+  useEffect(()=>{
+    getProductWord();
+  },[]);
+
+  async function getProductWord() {
+    var res = await axios.get("https://mustafa-fares.nouh-agency.com/api/ar/welcome");
+    console.log(res.data.data[0]);
+    setDataWord(res.data.data[0]);
+  }
+
+
   const form=useRef()
   return (
-    <div>
+    <div className='home'>
         <NavBar/>
         <div className='YK-about-ministry'>
         <div className="YK-title">
@@ -26,16 +40,15 @@ function Home() {
         <div className="YK-ministers-speech-container">
 
           <div className="YK-ministers-speech-text">
-            <h2>كلمة السيد الوزير لزوار الموقع</h2>
-            <p className='p1'>لسيدات والسادة زوار موقع وزارة النفط والثروات المعدنية الأعزاء يسعدني أن أرحب بكم في موقع الوزارة هذا وأتمنى أن تجدوه يفي بالحد الأدنى من احتياجاتكم من المعلومات التي ترغب في الحصول عليها أو العثور عليها فيمجال عمل أنشطة المؤسسات.
-              قامت شركات الوزارة بتسهيل إدارة الموقع لاستقبال تعليقاتكم ومقترحاتكم بهدف إضافة قيمة جديدة للموقع، كما أن هذا الموقع تحية للتواصل وتبادل الأفكار والمعلومات.</p>
+            <h2> {dataWord.title}</h2>
+            <p className='p1'> {dataWord.content}</p>
             <div className="YK-ministers-speech-desc">
-              <p className='YK-ministers-speech-desc-t1'>وزير البترول والثروة المعدنية</p>
-              <p className='YK-ministers-speech-desc-t2'>وزارة البترول والثروة المعدنية المهندس بسام رضوان طعمة</p>
+              <p className='YK-ministers-speech-desc-t1'>{dataWord.industry}</p>
+              <p className='YK-ministers-speech-desc-t2'> {dataWord.person} </p>
             </div>
           </div>
           <div className="YK-ministers-speech-card">
-            <img src={CardMinister} alt="CardMinister" />
+            <img src={dataWord.img} alt="CardMinister" />
           </div>
 
 
@@ -54,10 +67,10 @@ function Home() {
                 </div>
 
             <div className="right-join">
-              <p>أرسل بريدك الالكتروني للحصول على رسائل بأحدث الاخبار</p>
+              <p>:أرسل بريدك الالكتروني للحصول على رسائل بأحدث الاخبار</p>
                 <form ref={form} className="email" /*onSubmit={sendEmail}*/>
                 <button className="btn-join"> إرسال </button>
-                <input type="email" name="user_email" placeholder="بريدك الالكتروني" />
+                <input className="email" type="email" name="user_email" placeholder="بريدك الالكتروني" />
                    
                     
                 </form>

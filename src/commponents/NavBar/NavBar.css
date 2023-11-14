@@ -1,7 +1,10 @@
 .nav-all {
   background-image: url("../../assets/images/big picture.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 812px;
   position: relative;
+  margin: 0px;
 }
 .navbar {
   display: flex;
@@ -78,10 +81,12 @@
   justify-content: space-between;
   position: relative;
   cursor: text;
+  text-align: right;
+  box-sizing: unset;
 }
 .search-iconBack {
   position: absolute;
-  top: -14px;
+  top: -16px;
   left: 0px;
   width: 40px;
   height: 40px;
@@ -96,18 +101,26 @@
   height: 22.42px;
   color: rgba(255, 255, 255, 1);
 }
-.search-word {
-  position: absolute;
-  top: -14px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 40%;
-  font-family: cairo;
-  font-weight: 700;
-  font-size: 18px;
+.search-icon:hover{
+  cursor: pointer;
 }
+.search-word {
+  width: 170.78px;
+  height: 40px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: text;
+  background-color: rgba(217, 217, 217, 1);
+  text-align: right;
+  outline: none;
+  
+ 
+}
+
 .nav-button {
   background-color: rgba(217, 217, 217, 1);
   color: rgb(82, 82, 82);
@@ -290,6 +303,7 @@
     .nav-buttonSearch{
         width: 119px;
         height: 23px;
+        
     }
     .search-iconBack{
         width: 23px;
@@ -300,11 +314,12 @@
         height: 12.42px;
       }
       .search-word{
-        width: 40px;
+        width: 112px;
         height: 9px;
         font-size: 10px;
         top: -5px;
         right: 1px;
+        
         
       }
       .close-icon {
@@ -393,9 +408,9 @@
           height: 12.42px;
         }
         .search-word{
-          width: 40px;
+          width: 112px;
           height: 9px;
-          font-size: 10px;
+          font-size: 13px;
           top: -5px;
           right: 1px;
           

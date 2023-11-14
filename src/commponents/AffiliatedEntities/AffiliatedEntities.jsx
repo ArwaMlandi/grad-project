@@ -1,8 +1,22 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 import { affiliatedEntitie } from '../../Const/affiliatedEntitie'
 import './AffiliatedEntities.css'
 function AffiliatedEntities() {
+
+  const [data, setData] = useState([]);
+  
+  useEffect(()=>{
+    getProduct();
+  },[]);
+
+  async function getProduct() {
+    var res = await axios.get("https://mustafa-fares.nouh-agency.com/api/ar/affiliatedEntity");
+    console.log(res.data.data);
+    setData(res.data.data);
+  }
+
   const settings = {
     dots: false,
     infinite: true,
@@ -35,7 +49,7 @@ function AffiliatedEntities() {
         
       ]
   };
-  const CardToShow = affiliatedEntitie.slice(0, 3);
+  const CardToShow = data.slice(0, 3);
   return (
     <div className='affilied'>
       <div  className='affi-title'>
@@ -48,10 +62,10 @@ function AffiliatedEntities() {
           <div  className='affi-box'>
               
               <div className="affi-image">
-                  <img src={item.image} alt="" />
+                  <img src={item.img} alt="" />
               </div>
              
-              <p>{item.Title}
+              <p>{item.name}
              
               </p>
               
@@ -62,7 +76,7 @@ function AffiliatedEntities() {
      </div>
      <div className='affi-container-small'>
    
-   {affiliatedEntitie.map((item, index) => (
+   {data.map((item, index) => (
         <div key={index} className="affi-box-container">
         <div  className='affi-box'>
             

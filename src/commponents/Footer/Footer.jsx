@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Footer.css';
 import {HiOutlineLocationMarker} from 'react-icons/hi'
 import {BsTelephone} from 'react-icons/bs'
@@ -6,7 +6,19 @@ import {AiOutlineInbox,AiFillPhone} from 'react-icons/ai'
 import {IoMdLogIn} from 'react-icons/io'
 import {HiUsers} from 'react-icons/hi'
 import {MdEmail} from 'react-icons/md'
+import axios from 'axios';
 function Footer() {
+    const [data, setData] = useState([]);
+  
+    useEffect(()=>{
+      getProduct();
+    },[]);
+  
+    async function getProduct() {
+      var res = await axios.get("https://mustafa-fares.nouh-agency.com/api/ar/contact");
+      console.log(res.data.data);
+      setData(res.data.data[0]);
+    }
   return (
     <footer className="footer_wraper">
     
@@ -16,7 +28,7 @@ function Footer() {
             <div className="detailes">
                 <span>العنوان</span>
                 <span className="line">
-                    سوريا - دمشق - مشروع دمر
+                {data.location}
                 </span>
                
             </div>
@@ -27,14 +39,14 @@ function Footer() {
             <div className="detailes">
                 <span>اتصل بنا</span>
                 <div className='account'>
-                <span className="line-icon">
+                <span className="line-icon-phone">
                   
-                    <span>+963-11-3137930 </span>
+                    <span>  {"  "}{data.phone}</span>
                     <AiFillPhone className="icon" />
                 </span>
                 <span className="line-icon">
                     
-                    <span>info@mopmr.gov</span>
+                    <span>{data.email}</span>
                     <MdEmail className="icon" />
                 </span>
                 </div>

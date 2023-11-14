@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import {  BiChevronDown,BiSearch,BiChevronLeft } from "react-icons/bi";
 import { BsList } from "react-icons/bs";
 import {MdOutlineClose} from 'react-icons/md'
 function NavBar() {
+  const form=useRef()
   const [menueopen, setmenueopen] = useState(false);
   const [dropeopen, setdropopen] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
@@ -21,7 +22,13 @@ function NavBar() {
      
       <ul className="menue" style={{ top: menueopen && "0" }}>
         <div className="nav-allButton">
-      <button className="nav-buttonSearch"><p className="search-iconBack"><BiSearch className="search-icon"/></p><p className="search-word">...ابحث</p></button>
+        <form ref={form} className="nav-buttonSearch">
+        <p className="search-iconBack"><BiSearch className="search-icon"/></p>
+                <input className="search-word" type="search" placeholder="...ابحث" />
+                   
+                    
+                </form>
+     {/* <button className="nav-buttonSearch"><input placeholder="...ابحث" className="search-word"></input><p className="search-iconBack"><BiSearch className="search-icon"/></p></button>*/}
       <button className="nav-button">English</button>
       </div>
       

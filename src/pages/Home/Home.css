@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400&family=Roboto+Slab:wght@500&display=swap');
+.home{
+    margin: 0px;
+}
 .YK-about-ministry {
-    width: 99vw;
+    width: 100%;
     height: max-content;
     margin: 40px 0;
 }
@@ -203,12 +206,12 @@
 }
 .right-join p{
   margin-left: 0px;
-  width: 38%;
+  width: 48%;
     height: max-content;
     color: #000;
     text-align: right;
     font-family: Cairo;
-    font-size: 1.325rem;
+    font-size: 25px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -229,16 +232,18 @@
     height: 30px;
     padding: 1rem 0.7rem;
     border-radius: 15px;
-    
+    border:  1px solid rgb(178, 215, 233);
+    outline: none;
     
 }
 .email>input{
-    background-color: unset;
+    background-color: rgb(178, 215, 233);
     text-align: right;
     border: none;
     font-weight: 500;
     color: gray;
     font-size: 20px;
+    border:  unset;
 }
 
 .btn-join{
@@ -303,7 +308,7 @@ justify-content: center;
         color: #024D71;
     }
     .right-join p{
-        width: 95%;
+        width: 320px;
           font-size: 15px;
       }
       .email{
@@ -326,7 +331,7 @@ justify-content: center;
     
     .YK-ministers-speech-card img{
         width: 120%;
-        height: 58%;
+        height: 51%;
         margin-left: -20px;
        
     }
@@ -347,13 +352,13 @@ justify-content: center;
    
     .YK-ministers-speech-desc-t1,.YK-ministers-speech-desc-t2
    {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
         margin-left: 80px;
         width: 239px;
         color: #024D71;
     }
     .right-join p{
-        width: 95%;
+        width: 80%;
           font-size: 25px;
       }
     

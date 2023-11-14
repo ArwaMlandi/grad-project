@@ -1,10 +1,11 @@
+
 .YK-Service {
     width: 99vw;
     height: max-content;
     top: 1344px;
     left: 59px;
     border-radius: 30px;
-
+    margin: 0px;
 }
 
 .YK-Service-Title {
@@ -24,6 +25,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+    justify-items: center;
     
 }
 
@@ -120,7 +122,7 @@
     text-decoration: underline;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1022px) {
+@media screen and (min-width: 767px) and (max-width: 1080px) {
     .container-testa {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

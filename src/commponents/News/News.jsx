@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BiChevronLeft } from 'react-icons/bi'
 import './News.css';
 import rightImage from '../../assets/images/Rectangle 36.svg';
@@ -7,7 +7,23 @@ import {motion} from 'framer-motion'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import axios from 'axios';
 function News() {
+  const [data, setData] = useState([]);
+  const [data1, setdata1] = useState([]);
+  useEffect(()=>{
+    getProduct();
+  },[]);
+
+  async function getProduct() {
+    var res = await axios.get("https://mustafa-fares.nouh-agency.com/api/ar/news");
+    console.log(res.data.data[1]);
+    setdata1(res.data.data[1])
+    setData(res.data.data);
+
+  }
+  const new4= data.slice(1,5);
+ 
   const settings = {
     dots: false,
     infinite: true,
@@ -59,11 +75,11 @@ function News() {
       <div></div>
       <div className='news-down-images'>
       <div className="best-grid">
-      {news.map((item, index) => (
+      {new4.map((item, index) => (
           <div className="best-item-text">
             <div className='news-images'>
-            <img src={item.image} className='news-image'/>
-            <p className="best-item-text-p">{item.Title}</p>
+            <img src={item.img} className='news-image'/>
+            <p className="best-item-text-p">{item.title}</p>
             <button className="news-button-item"><span><BiChevronLeft/> اقرأ المزيد</span></button>
             </div>
            
@@ -75,9 +91,9 @@ function News() {
         <div className='news-down-oneImage'>
         <div className='cardNews'>
       <img
-       src={rightImage} alt="Card Image" className='cardImageNews' />
+       src={data1.img} alt="Card Image" className='cardImageNews' />
       <div className='cardContent'>
-        <p className='cardTitlee'>صدور نتائج الثانوية المهنية في حمص -بانياس-الرميلان الدورة الثانية لعام 2023</p>
+        <p className='cardTitlee'> {data1.title}</p>
         <button className="news-button"><span><BiChevronLeft/> اقرأ المزيد</span></button>
       </div>
     </div>
@@ -102,15 +118,15 @@ function News() {
       </div>
       <div className="container-news">
       <Slider {...settings} className='slid-news'>
-      {news.map((item, index) => (
+      {new4.map((item, index) => (
           <div key={index} className="slid-box-container">
           <div  className='slid-box'>
               
               <div className="slide-image">
-                  <img src={item.image} alt="" />
+                  <img src={item.img} alt="" />
               </div>
              
-              <p>{item.Title}</p>
+              <p>{item.title}</p>
               <button className="news-button-slid"><span><BiChevronLeft/> اقرأ المزيد</span></button>
           </div>
           </div>
