@@ -76,7 +76,7 @@ function AffiliatedEntities() {
      </div>
      <div className='affi-container-small'>
    
-   {data.map((item, index) => (
+   {affiliatedEntitie.map((item, index) => (
         <div key={index} className="affi-box-container">
         <div  className='affi-box'>
             

@@ -117,10 +117,6 @@
    
     
 }
-.container-testa :nth-child(4){
-    background-color: gainsboro;
-    text-decoration: underline;
-}
 
 @media screen and (min-width: 767px) and (max-width: 1080px) {
     .container-testa {

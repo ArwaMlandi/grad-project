@@ -143,14 +143,14 @@
 .YK-ministers-speech-desc-t1 {
 
     position: absolute;
-    top: 100%;
+    top: 92%;
     left: 60%;
     color: #07344B;
 }
 
 .YK-ministers-speech-desc-t2 {
-    width: 17.10175rem;
-    height: 7.0625rem;
+    width: 1.10175rem;
+    height: 5.0625rem;
 
     color: #07344B;
 
@@ -161,7 +161,7 @@
     font-weight: 600;
     line-height: normal;
     position: absolute;
-    top: 100%;
+    top: 92%;
     left: 5%;
     width: 50%;
 }
@@ -303,6 +303,7 @@ justify-content: center;
     .YK-ministers-speech-desc-t1,.YK-ministers-speech-desc-t2
    {
         font-size: 0.4rem;
+        top: 100%;
         margin-left: 36px;
         width: 124px;
         color: #024D71;
@@ -330,7 +331,7 @@ justify-content: center;
     }
     
     .YK-ministers-speech-card img{
-        width: 120%;
+        width: 100%;
         height: 51%;
         margin-left: -20px;
        
@@ -353,6 +354,7 @@ justify-content: center;
     .YK-ministers-speech-desc-t1,.YK-ministers-speech-desc-t2
    {
         font-size: 0.6rem;
+        top: 100%;
         margin-left: 80px;
         width: 239px;
         color: #024D71;

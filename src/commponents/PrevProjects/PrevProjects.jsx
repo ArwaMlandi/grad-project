@@ -49,7 +49,7 @@ function PrevProjects() {
       ]
   };
   return (
-    <div>
+    <div className='prev'>
        <div className='news-up'>
         <div className='prev-up-1'>
         <span className='news-up-1-icon'><BiChevronLeft/> </span>

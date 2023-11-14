@@ -75,7 +75,7 @@ function News() {
       <div></div>
       <div className='news-down-images'>
       <div className="best-grid">
-      {new4.map((item, index) => (
+      {news.map((item, index) => (
           <div className="best-item-text">
             <div className='news-images'>
             <img src={item.img} className='news-image'/>
@@ -91,7 +91,7 @@ function News() {
         <div className='news-down-oneImage'>
         <div className='cardNews'>
       <img
-       src={data1.img} alt="Card Image" className='cardImageNews' />
+       src={rightImage} alt="Card Image" className='cardImageNews' />
       <div className='cardContent'>
         <p className='cardTitlee'> {data1.title}</p>
         <button className="news-button"><span><BiChevronLeft/> اقرأ المزيد</span></button>
@@ -118,7 +118,7 @@ function News() {
       </div>
       <div className="container-news">
       <Slider {...settings} className='slid-news'>
-      {new4.map((item, index) => (
+      {news.map((item, index) => (
           <div key={index} className="slid-box-container">
           <div  className='slid-box'>
               
